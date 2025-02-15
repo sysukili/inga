@@ -20,6 +20,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
+A R package for causal inference in survival analysis.
+
 The goal of inga is to provide causal methods for survival analysis[@hernan] and reproduce the code from the book "First Course in Causal Inference".[@ding]
 
 ## Installation

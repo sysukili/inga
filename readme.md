@@ -6,6 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
+A R package for causal inference in survival analysis.
+
 The goal of inga is to provide causal methods for survival
 analysis(Hernan and Robins, n.d.) and reproduce the code from the book
 “First Course in Causal Inference”.(Ding, n.d.)

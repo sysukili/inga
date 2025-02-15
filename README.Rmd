@@ -1,0 +1,41 @@
+---
+output: github_document
+bibliography: references.bib
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# inga
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The goal of inga is to provide causal methods for survival analysis[@hernan] and reproduce the code from the book "First Course in Causal Inference".[@ding]
+
+## Installation
+
+You can install the development version of inga from [GitHub](https://github.com/sysukili/inga) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("sysukili/inga")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(inga)
+## basic example code
+```

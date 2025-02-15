@@ -1,18 +1,19 @@
 Package: inga
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Causal inference in survival analysis
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Qu Chen",
+      email = "sysukili@gmail.com",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: The goal of inga is to provide causal methods for survival analysis and reproduce the code from the book "First Course in Causal Inference".
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/sysukili/inga
 BugReports: https://github.com/sysukili/inga/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2

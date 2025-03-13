@@ -1,9 +1,13 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<!-- README.md is generated from README.qmd. Please render that file -->
+
+**NOTE: This is a R package created for reproducing my thesis.**
 
 # inga
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 A R package for causal inference in survival analysis.

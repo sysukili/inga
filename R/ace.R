@@ -1,15 +1,17 @@
-#' Average Causal Effect
+#' Average Causal Inference
 #'
-#' @param x a value
-#' @param y a value
+#' This function computes the average causal inference between two groups.
 #'
-#' @returns a value
+#' @param treatment a numeric vector representing the treatment group
+#' @param control a numeric vector representing the control group
+#'
+#' @return a numeric value representing the average causal inference
 #' @export
 #'
 #' @examples
-#' ace(1:10, 11:20)
-ace <- function(x, y) {
-  mean(x) - mean(y)
+#' treatment <- c(5, 10, 15, 20)
+#' control <- c(3, 8, 12, 18)
+#' ace(treatment, control)
+ace <- function(treatment, control) {
+    mean(treatment) - mean(control)
 }
-
-

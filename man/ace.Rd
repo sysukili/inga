@@ -2,21 +2,23 @@
 % Please edit documentation in R/ace.R
 \name{ace}
 \alias{ace}
-\title{Average Causal Effect}
+\title{Average Causal Inference}
 \usage{
-ace(x, y)
+ace(treatment, control)
 }
 \arguments{
-\item{x}{a value}
+\item{treatment}{a numeric vector representing the treatment group}
 
-\item{y}{a value}
+\item{control}{a numeric vector representing the control group}
 }
 \value{
-a value
+a numeric value representing the average causal inference
 }
 \description{
-Average Causal Effect
+This function computes the average causal inference between two groups.
 }
 \examples{
-ace(1:10, 11:20)
+treatment <- c(5, 10, 15, 20)
+control <- c(3, 8, 12, 18)
+ace(treatment, control)
 }

@@ -1,5 +1,3 @@
-
-
 <!-- README.md is generated from README.qmd. Please render that file -->
 
 **NOTE: This is a R package created for reproducing my thesis.**

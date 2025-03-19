@@ -1,0 +1,31 @@
+Package: inga
+Type: Package
+Title: Causal inference in survival analysis
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Qu Chen",
+      email = "sysukili@gmail.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: The goal of inga is to provide causal methods for survival analysis and reproduce the code from the book "First Course in Causal Inference".
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/sysukili/inga, https://sysukili.github.io/inga/
+BugReports: https://github.com/sysukili/inga/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Depends: 
+    R (>= 4.4.2)
+Imports: 
+    ggplot2,
+    grf,
+    survival
+VignetteBuilder: knitr

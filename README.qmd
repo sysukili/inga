@@ -1,0 +1,49 @@
+---
+output: github_document
+bibliography: references.bib
+format: gfm
+---
+
+
+<!-- README.md is generated from README.qmd. Please render that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "#>",
+    fig.path = "man/figures/README-",
+    out.width = "100%"
+)
+```
+
+**NOTE: This is a R package created for reproducing my thesis.**
+
+
+
+# inga
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+A R package for causal inference in survival analysis.The name "inga" comes from the Japanese word 「因果(いんが)」,which means cause and effect.
+
+The goal of inga is to provide causal methods for survival analysis[@hernan] and reproduce the code from the book "First Course in Causal Inference".[@ding]
+
+## Installation
+
+You can install the development version of inga from [GitHub](https://github.com/sysukili/inga) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("sysukili/inga")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(inga)
+## basic example code
+```

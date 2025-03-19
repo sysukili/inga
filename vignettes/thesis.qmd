@@ -20,6 +20,7 @@ library(inga)
 ```{r}
 #| label: fig-1
 
+library(ggplot2)
 # Load necessary libraries
 
 # Create a dataset similar to the image

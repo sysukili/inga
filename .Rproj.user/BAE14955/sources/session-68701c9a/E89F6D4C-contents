@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+.quarto
+paper
+inst/doc
+docs
+
+/.quarto/
+**/.quarto/

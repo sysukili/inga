@@ -1,0 +1,17 @@
+{
+  "hash": "1b2f92e685be11574ea5bf79d4320cd4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Thesis\nsubtitle: Learn how to use inga to reproduce my thesis\n  .\nvignette: >\n  %\\VignetteIndexEntry{quarto vignettes}\n  %\\VignetteEngine{quarto::html}\n  %\\VignetteEncoding{UTF-8}\nknitr:\n  opts_chunk: \n    collapse: true\n    comment: '#>'\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(inga)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n# Load necessary libraries\n\n# Create a dataset similar to the image\ndata <- data.frame(\n  Patient = factor(c(\"Patient 1\", \"Patient 2\", \"Patient 3\", \"Patient 4\", \"Patient 5\", \"Patient 6\"),\n    levels = rev(c(\"Patient 1\", \"Patient 2\", \"Patient 3\", \"Patient 4\", \"Patient 5\", \"Patient 6\"))\n  ),\n  Entry = c(2000, 2000, 2002, 2002, 2003, 2001), # Year of entry\n  Exit = c(2008, 2005, 2007, 2007, 2004, 2005), # Year of follow-up end\n  Event = c(0, 1, 0, 0, 1, 1) # 1 = Event occurred, 0 = Censored\n)\n\n# Define the accrual and follow-up periods\naccrual_start <- 2000\naccrual_end <- 2002\nfollowup_end <- 2008\n\n# Create the plot\nggplot(data, aes(y = Patient)) +\n  # Add follow-up lines\n  geom_segment(aes(x = Entry, xend = Exit, y = Patient, yend = Patient), color = \"black\") +\n  # Add entry points\n  geom_point(aes(x = Entry, y = Patient), shape = 16, size = 3) +\n  # Add censoring (open circles) and event markers (crosses)\n  geom_point(aes(x = Exit, y = Patient, shape = as.factor(Event)), size = 3) +\n  scale_shape_manual(values = c(1, 4), labels = c(\"Censored\", \"Event\")) + # 1 = Open circle, 4 = Cross\n  # Add vertical lines for accrual and follow-up periods\n  geom_vline(xintercept = c(accrual_start, accrual_end, followup_end), linetype = \"dashed\", color = \"red\") +\n  # Labels and themes\n  labs(x = \"Year of entry – calendar time\", y = \"\", shape = \"Outcome\") +\n  theme_minimal() +\n  theme(axis.text.y = element_text(size = 12), legend.position = \"top\")\n```\n\n::: {.cell-output-display}\n![](thesis_files/figure-html/fig-1-1.png){#fig-1 width=672}\n:::\n:::\n\n\n\n|  变量名  |                 解释                 |\n|:--------:|:------------------------------------:|\n|  death   |    是否在1992.12前死亡(1:是,0:否)    |\n|   time   | 存活时间,NA:Administrative censoring |\n|   qsmk   |   处理变量,是否停止吸烟(1:是,0:否)   |\n|   age    |                 年龄                 |\n| smokeyrs |                 烟龄                 |\n\n: NHEFS[^1]\n\n[^1]: 一项持续数十年的跟踪实验,[数据来源](https://miguelhernan.org/whatifbook)\n",
+    "supporting": [
+      "thesis_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

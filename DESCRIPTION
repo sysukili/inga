@@ -27,5 +27,6 @@ Depends:
 Imports: 
     ggplot2,
     grf,
-    survival
+    survival,
+    quarto
 VignetteBuilder: knitr

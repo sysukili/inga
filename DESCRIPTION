@@ -24,12 +24,13 @@ Suggests:
     quarto
 Config/testthat/edition: 3
 Depends: 
-    R (>= 4.4.2)
+    R (>= 4.4.3)
 Imports: 
     ggplot2,
     grf,
     survival,
-    quarto
+    quarto,
+    dplyr
 VignetteBuilder:
     knitr,
     quarto

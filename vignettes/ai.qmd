@@ -1,0 +1,53 @@
+---
+title: Ai决策与因果推断
+  .
+vignette: >
+  %\VignetteIndexEntry{quarto vignettes}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{quarto::html}
+knitr:
+  opts_chunk: 
+    collapse: true
+    comment: '#>'
+editor_options: 
+  chunk_output_type: console
+---
+
+**本文主要参考蒋智超老师的「AI是否帮助人类做出更明智的决策？」**
+
+在生活工作中我们常常要做出很多decisions(决策),比如在医疗领域,我们要决定是否给病人做手术,在金融领域,我们要决定是否给某个人贷款,在教育领域,我们要决定是否给某个学生奖学金.这些决策的背后都有一个共同的目标:希望通过干预某个变量X,来改变另一个变量Y的值.比如在医疗领域,我们希望通过给病人做手术来延长他的寿命,在金融领域,我们希望通过给某个人贷款来提高利润,在教育领域,我们希望通过给某个学生奖学金来提高他的学习成绩.在因果推断中,X常常被称为处理(treatment)或干预(intervention),而Y常常被称为结果(outcome).
+
+而在AI高速发展的今天,AI无疑可以帮助我们做出决策,我们可以把决策分为三种:人类独立决策,AI决策,AI辅助决策,各有优劣,如[@tbl-1]所示.
+
+```{r}
+#| label: tbl-1
+library(gt)
+
+# 创建数据框
+data <- data.frame(
+  Decision_Type = c("人类独立决策", "AI决策", "AI辅助决策"),
+  Efficiency = c(0,1,1),
+  Consistency = c(1,1,0),
+  Accountability = c(1,1,1)
+)
+
+# 生成表格
+data %>%
+  gt() %>%
+  cols_label(
+    Decision_Type = " ",
+    Efficiency = "高效",
+    Consistency = "一致性",
+    Accountability = "可追责"
+  ) %>%
+  tab_options(
+    table.font.size = "medium",
+    heading.title.font.size = "large",
+    heading.align = "center"
+  )
+
+```
+
+
+
+
